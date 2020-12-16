@@ -30,11 +30,13 @@ body {
   color: var(--cwhite);
   margin: 0;
   font-family: Netflix;
+  margin-bottom: 150px;
 }
 
 :root {
   --cblack: black;
   --cwhite: white;
+  --cgray: #6e6e6e;
 }
 
 /* ---- HEADER ---- */
@@ -73,6 +75,7 @@ a {
 .featured {
   margin-top: -90px;
   position: relative;
+  overflow: hidden;
 }
 
 .featured-details {
@@ -93,6 +96,7 @@ a {
   justify-content: center;
   gap: 10px;
   list-style: none;
+  font-size: 15px;
 }
 
 .tag::before {
@@ -158,8 +162,67 @@ a {
   background: url(../../images/icons/info.svg);
 }
 
+/* ---- MAIN  ---- */
+
+.list-content {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.list-title {
+  margin-top: 30px;
+}
+
+.list-item {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.list-item:first-child {
+  margin-left: 0;
+}
+
+.list {
+  padding: 0 1em;
+}
+
 /* ---- FOOTER ---- */
 
 .footer {
-  border: 1px solid red;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--cblack);
+  padding: 1em 0 0;
+}
+
+.tab-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  padding-bottom: 1em;
+}
+
+.tab-list a {
+  color: var(--cgray);
+}
+
+.tab-item {
+  text-align: center;
+  display: block;
+}
+
+.tab-icon {
+  fill: var(--cgray);
+  display: block;
+  margin: auto;
+}
+
+.tab-item a:hover,
+.tab-item a:hover path {
+  fill: var(--cwhite);
+  color: white !important;
 }
