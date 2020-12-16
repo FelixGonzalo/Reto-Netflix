@@ -1,0 +1,165 @@
+@font-face {
+  font-family: Netflix;
+  src: url("../../fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Netflix;
+  src: url("../../fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.credits {
+  font-family: system-ui;
+  background: #212429;
+  font-size: 11px;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.credits a {
+  color: #f865b0;
+  text-decoration: none;
+}
+
+body {
+  background: var(--cblack);
+  color: var(--cwhite);
+  margin: 0;
+  font-family: Netflix;
+}
+
+:root {
+  --cblack: black;
+  --cwhite: white;
+}
+
+/* ---- HEADER ---- */
+
+.header {
+  padding: 15px;
+  position: relative;
+  z-index: 2;
+  background-image: linear-gradient(
+    to bottom,
+    var(--cblack) 50%,
+    var(--cblack) 50%,
+    transparent 100%
+  );
+  padding: 15px 15px 100px;
+}
+
+a {
+  color: var(--cwhite);
+  text-decoration: none;
+}
+
+.navigation-item {
+  list-style: none;
+}
+
+.navigation {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ---- FEATURED ACTIONS ---- */
+
+.featured {
+  margin-top: -90px;
+  position: relative;
+}
+
+.featured-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    to top,
+    var(--cblack) 50%,
+    var(--cblack) 50%,
+    transparent 100%
+  );
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.tag::before {
+  content: "•";
+  margin-right: 5px;
+}
+
+.tag:first-child::before {
+  display: none;
+}
+
+.featured-actions {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+}
+
+.button-play {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding: 4px 20px;
+  border-radius: 3px;
+}
+
+.button-play::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.button-secondary {
+  background: none;
+  filter: invert(100%);
+  font-size: 1.1em;
+}
+
+.button-secondary::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+}
+
+.icon-plus::before {
+  background: url(../../images/icons/plus.svg);
+}
+
+.icon-play::before {
+  background: url(../../images/icons/play.svg);
+}
+
+.icon-info::before {
+  background: url(../../images/icons/info.svg);
+}
+
+/* ---- FOOTER ---- */
+
+.footer {
+  border: 1px solid red;
+}
